@@ -21,11 +21,11 @@ vector<int> bubble_sort(vector<int>& nums){
     return nums;
 }
 
-int main(){
-    vector<int>a = {1,3,5,2,6,7,9,10,99,1};
-    vector<int>m = bubble_sort(a);
-    for(int i = 0; i < a.size(); i++){
-        cout<<m[i]<<endl;
-    }
+//int main(){
+//    vector<int>a = {1,3,5,2,6,7,9,10,99,1};
+//    vector<int>m = bubble_sort(a);
+//    for(int i = 0; i < a.size(); i++){
+//        cout<<m[i]<<endl;
+//    }
 
-}
+//}
