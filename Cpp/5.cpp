@@ -13,7 +13,7 @@ public:
         vector<vector<int>> dp(n, vector<int>(n));
         string ans;
         for(int l = 0; l < n; l++){
-            for(int i = 0; i + 1 < n; i++){
+            for(int i = 0; i + l < n; i++){
                 int j = i + 1;
                 if (l == 0){
                     dp[i][j] = 1;

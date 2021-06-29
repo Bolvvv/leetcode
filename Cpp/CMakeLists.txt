@@ -1,6 +1,8 @@
-cmake_minimum_required(VERSION 3.17)
-project(Cpp)
+# CMake 最低版本号要求
+cmake_minimum_required (VERSION 2.8)
 
-set(CMAKE_CXX_STANDARD 14)
+# 项目信息
+project (leetcode_test)
 
-add_executable(Cpp 1.cpp bubble_sort.cpp test.cpp 2.cpp 3.cpp 4.cpp 5.cpp)
+# 指定生成目标
+add_executable(leetcode_test 31_next_permutation.cpp)

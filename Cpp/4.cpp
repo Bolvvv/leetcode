@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    string longestPalindrome(string s) {
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
 
     }
 };
