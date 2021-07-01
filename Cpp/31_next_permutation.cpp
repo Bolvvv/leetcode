@@ -4,24 +4,43 @@
 
 class Solution {
     public:
-    void nextPermutation(std::vector<int>& nums){
-        
-        std::vector<int>::reverse_iterator p;
-        for (p = nums.rbegin(); p != nums.rend()-1; ++p){
-            std::vector<int>::reverse_iterator it;
-            for (it = p+1; it != nums.rend(); ++it){
-                if (*p > *it){
-                    int tmp = *p;
-                    *p = *it;
-                    *it = tmp;
-                }
-            }
-        }
-        //此时说明nums已是最大值，需要将其转换为最小值
-        if(p == nums.rend()-1){
-            std::reverse(nums.begin(), nums.end());
-        }
+    //错误方法：
+//    void nextPermutation(std::vector<int>& nums){
+//        std::vector<int>::iterator p;
+//        bool stop_flag = false;
+//        for (p = nums.end()-1; p != nums.begin(); --p){
+//            std::vector<int>::iterator it;
+//            for (it = p-1; it != nums.begin()-1; --it){
+//                if (*p > *it){
+//                    int tmp = *p;
+//                    *p = *it;
+//                    *it = tmp;
+//                    stop_flag = true;
+//                    break;
+//                }
+//            }
+//            if(stop_flag) break;
+//        }
+//        //此时说明nums已是最大值，需要将其转换为最小值
+//        if(p == nums.begin()){
+//            std::reverse(nums.begin(), nums.end());
+//        }
+//    }
 
+    //标准答案：
+    void nextPermutation(vector<int>& nums){
+        int i = nums.size() - 2;
+        while(i >= 0 && nums[i] >= nums[i+1]) {
+            i--;
+        }
+        if(i >= 0){
+            int j = nums.size() - 1;
+            while(j >= 0 && nums[i] >= nums[j]){
+                j--;
+            }
+            std::swap(nums[i], nums[j]);
+        }
+        std::reverse(nums.begin()+i+1, nums.end());
     }
 };
 

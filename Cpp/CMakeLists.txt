@@ -5,4 +5,4 @@ cmake_minimum_required (VERSION 2.8)
 project (leetcode_test)
 
 # 指定生成目标
-add_executable(leetcode_test 31_next_permutation.cpp)
+add_executable(leetcode_test 33_search_rotation_sort_array.cpp)
