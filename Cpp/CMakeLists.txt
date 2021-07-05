@@ -7,4 +7,4 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 project (leetcode_test)
 
 # 指定生成目标
-add_executable(leetcode_test 46_permute.cpp 48_rotate.cpp 53.cpp)
+add_executable(leetcode_test 46_permute.cpp 48_rotate.cpp 53.cpp 54_spiral_order.cpp)
