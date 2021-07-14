@@ -7,4 +7,4 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 project (leetcode_test)
 
 # 指定生成目标
-add_executable(leetcode_test 78_subsets.cpp)
+add_executable(leetcode_test 79_exist.cpp)
